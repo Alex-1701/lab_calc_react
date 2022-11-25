@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-        <p>lol kek</p>
+        <p>lol kek temp</p>
       </header>
     </div>
   );
