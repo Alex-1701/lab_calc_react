@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className={styles.app} id="lol">
-      <p>lol</p>
+      <p>{lol}</p>
     </div>
   )
 }
