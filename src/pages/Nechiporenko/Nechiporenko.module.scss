@@ -1,0 +1,11 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.result_box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}

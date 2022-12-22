@@ -1,4 +1,19 @@
+* {
+  font-family: sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  background: #e0e0e0;
+  height: 100%;
   margin: 0;
 }
 
+.input_box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

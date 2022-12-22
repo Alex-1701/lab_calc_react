@@ -1,0 +1,33 @@
+.page_header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background: #c2c2c2;
+  height: 40px;
+  position: static;
+}
+
+.menu_icon, .delete_icon {
+  position: absolute;
+  cursor: pointer;
+}
+
+.menu_icon {
+  left: 0;
+  padding: 3px;
+  margin: 5px;
+}
+
+.delete_icon {
+  right: 0;
+  margin: 3px;
+}
+
+.page_title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #515151;
+  font-weight: bold;
+}
