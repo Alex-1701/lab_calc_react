@@ -21,6 +21,7 @@ export function Nechiporenko() {
     setParamX(null)
   }
 
+
   return (
     <Layout onClear={clearInputs}>
       <Calculator
