@@ -1,23 +1,38 @@
 import React, { useMemo, useState } from "react"
 
 import { Calculator, InputField, Layout, ResultField } from "../../components"
-import { Fibrinogen1 } from "./Fibrinogen.formulas"
+import { FibrinogenFormula } from "./Fibrinogen.formulas"
 
 export function Fibrinogen() {
-  const [paramA, setParamA] = useState<number>(0)
-  const [paramX, setParamX] = useState<number>(0)
+  const [paramA, setParamA] = useState<number | null>(null)
+  const [paramX, setParamX] = useState<number | null>(null)
 
-  const result = useMemo(() => Fibrinogen1(paramA, paramX), [paramA, paramX])
+  const result = useMemo(() => FibrinogenFormula(paramA, paramX), [paramA, paramX])
+
+  const clearInputs = () => {
+    setParamA(null)
+    setParamX(null)
+  }
 
   return (
-    <Layout>
-      <Calculator>
-        <div className="input_box">
-          <InputField inputName="A" setValue={(value) => setParamA(value)} />
-          <InputField inputName="X" setValue={(value) => setParamX(value)} />
-        </div>
-        <ResultField resultName="F" value={result} />
-      </Calculator>
+    <Layout onClear={clearInputs}>
+      <Calculator
+        inputBox={
+          <>
+            <InputField
+              inputName="A"
+              setValue={(value) => setParamA(value)}
+              value={paramA}
+            />
+            <InputField
+              inputName="X"
+              setValue={(value) => setParamX(value)}
+              value={paramX}
+            />
+          </>
+        }
+        outputBox={<ResultField resultName="F" value={result} />}
+      />
     </Layout>
   )
 }

@@ -9,12 +9,12 @@ interface Props {
 
 export function ResultField({resultName, value}: Props) {
   return (
-    <div className={styles.name_and_result}>
-      <div className={styles.result_name}>{resultName}</div>
+    <div className={styles.nameAndResult}>
+      <div className={styles.resultName}>{resultName}</div>
       <input
         type="number"
         disabled
-        className={styles.result_field}
+        className={styles.resultField}
         value={value}
       />
     </div>

@@ -1,24 +1,38 @@
 import React, { useMemo, useState } from "react"
 
 import { Calculator, InputField, Layout, ResultField } from "../../components"
-import { SMG1 } from "./SMGFormulas"
+import { SMGFormula } from "./SMGFormulas"
 
 export function SMG() {
-  const [paramA, setParamA] = useState<number>(0)
-  const [paramB, setParamB] = useState<number>(0)
+  const [paramA, setParamA] = useState<number | null>(null)
+  const [paramB, setParamB] = useState<number | null>(null)
 
-  const resSMG = useMemo(() => SMG1(paramA, paramB), [paramA, paramB])
+  const resSMG = useMemo(() => SMGFormula(paramA, paramB), [paramA, paramB])
+
+  const clearInputs = (): void => {
+    setParamA(null)
+    setParamB(null)
+  }
 
   return (
-    <Layout>
-      <Calculator>
-        <div className="input_box">
-          <InputField inputName="A" setValue={(value) => setParamA(value)} />
-          <InputField inputName="B" setValue={(value) => setParamB(value)} />
-        </div>
-
-        <ResultField resultName="KA" value={resSMG} />
-      </Calculator>
+    <Layout onClear={clearInputs}>
+      <Calculator
+        inputBox={
+          <>
+            <InputField
+              inputName="A"
+              setValue={(value) => setParamA(value)}
+              value={paramA}
+            />
+            <InputField
+              inputName="B"
+              setValue={(value) => setParamB(value)}
+              value={paramB}
+            />
+          </>
+        }
+        outputBox={<ResultField resultName="KA" value={resSMG} />}
+      />
     </Layout>
   )
 }

@@ -1,4 +1,4 @@
-.page_header {
+.page-header {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -7,23 +7,23 @@
   position: static;
 }
 
-.menu_icon, .delete_icon {
+.menu-icon, .delete-icon {
   position: absolute;
   cursor: pointer;
 }
 
-.menu_icon {
+.menu-icon {
   left: 0;
   padding: 3px;
   margin: 5px;
 }
 
-.delete_icon {
+.delete-icon {
   right: 0;
   margin: 3px;
 }
 
-.page_title {
+.page-title {
   width: 100%;
   display: flex;
   justify-content: center;

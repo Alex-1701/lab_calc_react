@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import noop from "lodash"
+import { noop } from "lodash"
 import { useLocation, useNavigate } from "react-router"
 import menu from "../../images/menu.svg"
 import clear from "../../images/clear.svg"
@@ -7,7 +7,11 @@ import { pages } from "../../routePath"
 
 import styles from "./Header.module.scss"
 
-export function Header() {
+interface Props {
+  onClear?: () => void
+}
+
+export function Header({ onClear = noop }: Props) {
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -23,17 +27,22 @@ export function Header() {
   }, [location.pathname])
 
   return (
-    <header className={styles.page_header}>
+    <header className={styles.pageHeader}>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
       <img
-        className={styles.menu_icon}
+        className={styles.menuIcon}
         src={menu}
         onClick={() => navigate(pages.Menu.route)}
         alt=""
       />
-      <div className={styles.page_title}>{pageName}</div>
+      <div className={styles.pageTitle}>{pageName}</div>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
-      <img className={styles.delete_icon} src={clear} onClick={noop} alt="" />
+      <img
+        className={styles.deleteIcon}
+        src={clear}
+        onClick={onClear}
+        alt=""
+      />
     </header>
   )
 }
