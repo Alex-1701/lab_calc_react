@@ -10,7 +10,7 @@ interface Props {
 export function Calculator({ inputBox, outputBox }: Props) {
   return (
     <div className={styles.calculator}>
-      <div className={styles.inputBox}>{inputBox}</div>
+      <div className={styles['input-box']}>{inputBox}</div>
       {outputBox}
     </div>
   )

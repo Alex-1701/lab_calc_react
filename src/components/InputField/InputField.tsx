@@ -14,11 +14,11 @@ export function InputField({ inputName, setValue, value }: Props) {
   }
 
   return (
-    <div className={styles.inputParam}>
-      <div className={styles.paramName}>{inputName}</div>
+    <div className={styles['input-param']}>
+      <div className={styles['param-name']}>{inputName}</div>
       <input
         type="number"
-        className={styles.inputField}
+        className={styles['input-field']}
         onChange={handleInputChange}
         value={value || ""}
       />

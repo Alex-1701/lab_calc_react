@@ -27,18 +27,18 @@ export function Header({ onClear = noop }: Props) {
   }, [location.pathname])
 
   return (
-    <header className={styles.pageHeader}>
+    <header className={styles['page-header']}>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
       <img
-        className={styles.menuIcon}
+        className={styles['menu-icon']}
         src={menu}
         onClick={() => navigate(pages.Menu.route)}
         alt=""
       />
-      <div className={styles.pageTitle}>{pageName}</div>
+      <div className={styles['page-title']}>{pageName}</div>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
       <img
-        className={styles.deleteIcon}
+        className={styles['delete-icon']}
         src={clear}
         onClick={onClear}
         alt=""
