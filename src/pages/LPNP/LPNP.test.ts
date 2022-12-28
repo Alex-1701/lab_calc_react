@@ -6,6 +6,6 @@ describe("LPNP", () => {
     const LPVP = 1
     const TG = 1
     const res = LPNPFormula(OXC, LPVP, TG).toString()
-    expect(res).toMatch((2.9).toString())
+    expect(res).toMatch((-0.5).toString())
   })
 })

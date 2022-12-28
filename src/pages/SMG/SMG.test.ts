@@ -5,6 +5,6 @@ describe("SMG", () => {
     const A = 1
     const B = 1
     const res = SMGFormula(A, B).toString()
-    expect(res).toMatch((2.9).toString())
+    expect(res).toMatch((0).toString())
   })
 })

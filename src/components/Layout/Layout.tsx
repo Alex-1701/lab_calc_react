@@ -12,10 +12,10 @@ interface Props {
 
 export function Layout({ children, onClear = noop }: Props) {
   return (
-    <div>
+    <>
       <Header onClear={onClear} />
       <div className={styles.content}>{children}</div>
       <GitHubLink />
-    </div>
+    </>
   )
 }
