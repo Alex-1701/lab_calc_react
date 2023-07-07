@@ -1,7 +1,7 @@
-/build
+/dist
 /node_modules
 /public
+/config
 
 /src/service-worker.ts
 /src/serviceWorkerRegistration.ts
-/src/setupTests.ts

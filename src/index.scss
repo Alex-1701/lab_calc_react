@@ -1,4 +1,15 @@
-body {
-  margin: 0;
+@import "global";
+
+* {
+  font-family: sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  background: $background-white;
+  height: 100%;
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 308px;
+  padding-left: 40px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.output-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}

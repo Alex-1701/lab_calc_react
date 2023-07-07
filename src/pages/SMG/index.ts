@@ -1,0 +1,1 @@
+export { SMG } from "./SMG"
