@@ -2,7 +2,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
-const WorkboxPlugin = require("workbox-webpack-plugin")
 const { GenerateSW } = require("workbox-webpack-plugin")
 
 module.exports = {
@@ -68,21 +67,17 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      // favicon: "./public/icons/favicon.ico",
-      // manifest: "./public/manifest.json",
     }),
-    // new WorkboxPlugin.GenerateSW({
-    //   clientsClaim: true,
-    //   skipWaiting: true,
-    // }),
     new CopyWebpackPlugin({
       patterns: [
         { from: "./public/manifest.json", to: "./" },
+        { from: "./public/robots.txt", to: "./" },
         { from: "./public/icons", to: "./icons" },
       ],
     }),
     new GenerateSW({
-      maximumFileSizeToCacheInBytes: 50_000_000,
+      maximumFileSizeToCacheInBytes: 5_000_000,
+      navigateFallback: "/index.html"
     }),
   ],
 }
