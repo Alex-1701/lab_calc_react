@@ -1,7 +1,6 @@
 import React from "react"
 import { noop } from "lodash"
-import { Header } from "../Header"
-import { GitHubLink } from "../GitHubLink"
+import { Header, GitHubLink } from "@components"
 
 import styles from "./Layout.module.scss"
 

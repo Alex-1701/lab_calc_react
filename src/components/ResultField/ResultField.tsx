@@ -12,6 +12,8 @@ interface Props {
 export function ResultField({ resultName, value, normalValue = null }: Props) {
   const [isOk, setIsOk] = useState(true)
 
+
+
   useEffect(() => {
     if (value && normalValue !== null && +value !== normalValue) {
       setIsOk(false)
@@ -22,12 +24,7 @@ export function ResultField({ resultName, value, normalValue = null }: Props) {
 
   return (
     <div className={styles.nameAndResultAndWarning}>
-      <div
-        className={clsx(
-          styles.nameAndResult,
-          !isOk && styles.notOkResult
-        )}
-      >
+      <div className={clsx(styles.nameAndResult, !isOk && styles.notOkResult)}>
         <div className={styles.resultName}>{resultName}</div>
         <input
           type="number"

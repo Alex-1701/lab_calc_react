@@ -20,7 +20,10 @@ export const toDigits = (value: number, count: number): number => {
  * @param x коэфициент (фактор) (то что выдал калибратор)
  * @constructor
  */
-export const FibrinogenFormula = (a: number | null, x: number | null): string => {
+export const FibrinogenFormula = (
+  a: number | null,
+  x: number | null
+): string => {
   if (a && x) {
     const tempValue = toDigits(2.85 / x, 2)
 

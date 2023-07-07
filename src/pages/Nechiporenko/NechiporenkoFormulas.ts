@@ -18,6 +18,4 @@ export const NFormulaNormal = (coefficient: 1 | 2 | 4 | 16) => coefficient
 export const AFormula = (x: number | null, coefficient: 1 | 2 | 4 | 16) =>
   x ? ((x * coefficient) / 3).toFixed(3) : ""
 
-
-
 // Валидация не актуальна.

@@ -11,7 +11,10 @@ export function Menu() {
   return (
     <Layout>
       <div className={styles.menu}>
-        <button type="button" onClick={() => navigate(pages.Nechiporenko.route)}>
+        <button
+          type="button"
+          onClick={() => navigate(pages.Nechiporenko.route)}
+        >
           Нечипоренко
         </button>
         <button type="button" onClick={() => navigate(pages.SMG.route)}>
