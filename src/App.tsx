@@ -7,13 +7,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/menu" />} />
+        <Route path="/" element={<Navigate to={pages.Menu.route} />} />
         <Route path={pages.Menu.route} element={<Menu />} />
         <Route path={pages.Fibrinogen.route} element={<Fibrinogen />} />
         <Route path={pages.LPNP.route} element={<LPNP />} />
         <Route path={pages.Nechiporenko.route} element={<Nechiporenko />} />
         <Route path={pages.SMG.route} element={<SMG />} />
-        <Route path="*" element={<Navigate to="/menu" />} />
+        <Route path="*" element={<Navigate to={pages.Menu.route} />} />
       </Routes>
     </BrowserRouter>
   )
