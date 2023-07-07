@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react"
-import { Calculator, InputField, Layout, ResultField } from "../../components"
+import { Calculator, InputField, Layout, ResultField } from "@components"
 import { AFormula, NFormula, NFormulaNormal } from "./NechiporenkoFormulas"
 
 import styles from "./Nechiporenko.module.scss"
@@ -33,7 +33,7 @@ export function Nechiporenko() {
         }
         outputBox={
           <>
-            <div className={styles["result-box"]}>
+            <div className={styles.resultBox}>
               <ResultField
                 resultName="H1"
                 value={resN1}
@@ -44,7 +44,7 @@ export function Nechiporenko() {
               <ResultField resultName="H16" value={resN16} normalValue={0} />
             </div>
 
-            <div className={styles["result-box"]}>
+            <div className={styles.resultBox}>
               <ResultField resultName="A1" value={resA1} normalValue={0} />
               <ResultField resultName="A2" value={resA2} normalValue={0} />
               <ResultField resultName="A4" value={resA4} />

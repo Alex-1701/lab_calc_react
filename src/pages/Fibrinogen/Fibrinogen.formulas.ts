@@ -14,9 +14,10 @@ export const toDigits = (value: number, count: number): number => {
 }
 
 /**
- * Вычисление фибриногена
- * @param a количество
- * @param x коэфициент
+ * Пересчёт в цифры того что выдаёт аппарат. Получает истинное значение по пациентам.
+ * 2.85 это выдаёт аппарат (калибратор) - то что должно
+ * @param a значение фибриногена поциента
+ * @param x коэфициент (фактор) (то что выдал калибратор)
  * @constructor
  */
 export const FibrinogenFormula = (a: number | null, x: number | null): string => {

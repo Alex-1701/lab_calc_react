@@ -21,22 +21,22 @@ export function ResultField({ resultName, value, normalValue = null }: Props) {
   }, [value, normalValue])
 
   return (
-    <div className={styles["name-and-result-and-warning"]}>
+    <div className={styles.nameAndResultAndWarning}>
       <div
         className={clsx(
-          styles["name-and-result"],
-          !isOk && styles["not-ok-result"]
+          styles.nameAndResult,
+          !isOk && styles.notOkResult
         )}
       >
-        <div className={styles["result-name"]}>{resultName}</div>
+        <div className={styles.resultName}>{resultName}</div>
         <input
           type="number"
           disabled
-          className={styles["result-field"]}
+          className={styles.resultField}
           value={value}
         />
       </div>
-      <div className={clsx(!isOk && styles["warning-circle"])} />
+      <div className={clsx(!isOk && styles.warningCircle)} />
     </div>
   )
 }

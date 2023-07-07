@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react"
-import { Calculator, InputField, Layout, ResultField } from "../../components"
+import { Calculator, InputField, Layout, ResultField } from "@components"
 import { LPNPFormula } from "./LPNP.formulas"
 
 export function LPNP() {

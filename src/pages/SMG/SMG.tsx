@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react"
 
-import { Calculator, InputField, Layout, ResultField } from "../../components"
+import { Calculator, InputField, Layout, ResultField } from "@components"
 import { SMGFormula } from "./SMGFormulas"
 
 export function SMG() {

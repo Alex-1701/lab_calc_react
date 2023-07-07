@@ -1,6 +1,6 @@
 import React from "react"
 import { useNavigate } from "react-router"
-import { Layout } from "../../components"
+import { Layout } from "@components"
 import { pages } from "../../routePath"
 
 import styles from "./Menu.module.scss"
