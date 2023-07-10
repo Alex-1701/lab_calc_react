@@ -1,5 +1,4 @@
 import React from "react"
-import { noop } from "lodash"
 import { Header, GitHubLink } from "@components"
 
 import styles from "./Layout.module.scss"
@@ -9,7 +8,7 @@ interface Props {
   onClear?: () => void
 }
 
-export function Layout({ children, onClear = noop }: Props) {
+export function Layout({ children, onClear }: Props) {
   return (
     <>
       <Header onClear={onClear} />

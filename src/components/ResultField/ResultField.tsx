@@ -12,8 +12,6 @@ interface Props {
 export function ResultField({ resultName, value, normalValue = null }: Props) {
   const [isOk, setIsOk] = useState(true)
 
-
-
   useEffect(() => {
     if (value && normalValue !== null && +value !== normalValue) {
       setIsOk(false)

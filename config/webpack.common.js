@@ -2,7 +2,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
-const { GenerateSW } = require("workbox-webpack-plugin")
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -57,6 +56,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js", ".scss"],
     alias: {
       "@components": path.resolve(__dirname, "../src/components"),
+      "@images": path.resolve(__dirname, "../src/images"),
     },
   },
   output: {
@@ -74,10 +74,6 @@ module.exports = {
         { from: "./public/robots.txt", to: "./" },
         { from: "./public/icons", to: "./icons" },
       ],
-    }),
-    new GenerateSW({
-      maximumFileSizeToCacheInBytes: 5_000_000,
-      navigateFallback: "/index.html"
     }),
   ],
 }

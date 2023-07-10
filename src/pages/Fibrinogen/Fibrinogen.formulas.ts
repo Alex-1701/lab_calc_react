@@ -22,7 +22,7 @@ export const toDigits = (value: number, count: number): number => {
  */
 export const FibrinogenFormula = (
   a: number | null,
-  x: number | null
+  x: number | null,
 ): string => {
   if (a && x) {
     const tempValue = toDigits(2.85 / x, 2)
