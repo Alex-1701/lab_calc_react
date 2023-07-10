@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react"
+import React, { useState } from "react"
 
 import { Calculator, InputField, Layout, ResultField } from "@components"
 
@@ -8,10 +8,7 @@ export function Fibrinogen() {
   const [paramA, setParamA] = useState<number | null>(null)
   const [paramX, setParamX] = useState<number | null>(null)
 
-  const result = useMemo(
-    () => FibrinogenFormula(paramA, paramX),
-    [paramA, paramX]
-  )
+  const result = FibrinogenFormula(paramA, paramX)
 
   const clearInputs = () => {
     setParamA(null)

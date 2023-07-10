@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react"
+import React, { useState } from "react"
 
 import { Calculator, InputField, Layout, ResultField } from "@components"
 import { SMGFormula } from "./SMGFormulas"
@@ -7,7 +7,7 @@ export function SMG() {
   const [paramA, setParamA] = useState<number | null>(null)
   const [paramB, setParamB] = useState<number | null>(null)
 
-  const resSMG = useMemo(() => SMGFormula(paramA, paramB), [paramA, paramB])
+  const result = SMGFormula(paramA, paramB)
 
   const clearInputs = (): void => {
     setParamA(null)
@@ -31,7 +31,7 @@ export function SMG() {
             />
           </>
         }
-        outputBox={<ResultField resultName="KA" value={resSMG} />}
+        outputBox={<ResultField resultName="KA" value={result} />}
       />
     </Layout>
   )

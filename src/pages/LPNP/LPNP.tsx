@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react"
+import React, { useState } from "react"
 import { Calculator, InputField, Layout, ResultField } from "@components"
 import { LPNPFormula } from "./LPNP.formulas"
 
@@ -7,10 +7,7 @@ export function LPNP() {
   const [paramLPVP, setParamLPVP] = useState<number | null>(null)
   const [paramTG, setParamTG] = useState<number | null>(null)
 
-  const resLPNP: string = useMemo(
-    () => LPNPFormula(paramOXC, paramLPVP, paramTG),
-    [paramOXC, paramLPVP, paramTG]
-  )
+  const result = LPNPFormula(paramOXC, paramLPVP, paramTG)
 
   const clearInputs = (): void => {
     setParamOXC(null)
@@ -41,7 +38,7 @@ export function LPNP() {
             />
           </>
         }
-        outputBox={<ResultField resultName="ЛПНП" value={resLPNP} />}
+        outputBox={<ResultField resultName="ЛПНП" value={result} />}
       />
     </Layout>
   )

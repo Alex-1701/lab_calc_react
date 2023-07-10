@@ -10,5 +10,10 @@
     border-radius: 7px;
     background-color: #f2f2f2;
     padding: 5px 35px;
+
+    &:hover {
+      cursor: pointer;
+      //border: 2px solid black;
+    }
   }
 }

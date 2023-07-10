@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react"
+import React, { useState } from "react"
 import { Calculator, InputField, Layout, ResultField } from "@components"
 import { AFormula, NFormula, NFormulaNormal } from "./NechiporenkoFormulas"
 
@@ -7,15 +7,15 @@ import styles from "./Nechiporenko.module.scss"
 export function Nechiporenko() {
   const [paramX, setParamX] = useState<number | null>(null)
 
-  const resN1 = useMemo(() => NFormula(paramX, 1), [paramX])
-  const resN2 = useMemo(() => NFormula(paramX, 2), [paramX])
-  const resN4 = useMemo(() => NFormula(paramX, 4), [paramX])
-  const resN16 = useMemo(() => NFormula(paramX, 16), [paramX])
+  const resultN1 = NFormula(paramX, 1)
+  const resultN2 = NFormula(paramX, 2)
+  const resultN4 = NFormula(paramX, 4)
+  const resultN16 = NFormula(paramX, 16)
 
-  const resA1 = useMemo(() => AFormula(paramX, 1), [paramX])
-  const resA2 = useMemo(() => AFormula(paramX, 2), [paramX])
-  const resA4 = useMemo(() => AFormula(paramX, 4), [paramX])
-  const resA16 = useMemo(() => AFormula(paramX, 16), [paramX])
+  const resultA1 = AFormula(paramX, 1)
+  const resultA2 = AFormula(paramX, 2)
+  const resultA4 = AFormula(paramX, 4)
+  const resultA16 = AFormula(paramX, 16)
 
   const clearInputs = (): void => {
     setParamX(null)
@@ -36,19 +36,19 @@ export function Nechiporenko() {
             <div className={styles.resultBox}>
               <ResultField
                 resultName="H1"
-                value={resN1}
+                value={resultN1}
                 normalValue={NFormulaNormal(1)}
               />
-              <ResultField resultName="H2" value={resN2} normalValue={0} />
-              <ResultField resultName="H4" value={resN4} normalValue={0} />
-              <ResultField resultName="H16" value={resN16} normalValue={0} />
+              <ResultField resultName="H2" value={resultN2} normalValue={0} />
+              <ResultField resultName="H4" value={resultN4} normalValue={0} />
+              <ResultField resultName="H16" value={resultN16} normalValue={0} />
             </div>
 
             <div className={styles.resultBox}>
-              <ResultField resultName="A1" value={resA1} normalValue={0} />
-              <ResultField resultName="A2" value={resA2} normalValue={0} />
-              <ResultField resultName="A4" value={resA4} />
-              <ResultField resultName="A16" value={resA16} />
+              <ResultField resultName="A1" value={resultA1} normalValue={0} />
+              <ResultField resultName="A2" value={resultA2} normalValue={0} />
+              <ResultField resultName="A4" value={resultA4} />
+              <ResultField resultName="A16" value={resultA16} />
             </div>
           </>
         }
