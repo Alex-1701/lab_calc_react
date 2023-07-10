@@ -31,7 +31,6 @@ export function ResultField({ resultName, value, normalValue = null }: Props) {
           value={value}
         />
       </div>
-      <div className={clsx(!isOk && styles.warningCircle)} />
     </div>
   )
 }

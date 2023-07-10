@@ -4,15 +4,25 @@
   justify-content: space-between;
   align-items: center;
   height: 40px;
-  padding-left: 7px;
-  padding-right: 7px;
   background: #c2c2c2;
 }
 
 .icon {
   cursor: pointer;
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
+  -webkit-tap-highlight-color: transparent;
+
+  border-radius: 5px;
+  padding: 7.5px;
+
+  &:active {
+    background-color: #a4a4a4;
+
+    path {
+      fill: #3f3434;
+    }
+  }
 }
 
 .page-title {

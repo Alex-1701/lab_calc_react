@@ -39,14 +39,14 @@ export function Nechiporenko() {
                 value={resultN1}
                 normalValue={NFormulaNormal(1)}
               />
-              <ResultField resultName="H2" value={resultN2} normalValue={0} />
-              <ResultField resultName="H4" value={resultN4} normalValue={0} />
-              <ResultField resultName="H16" value={resultN16} normalValue={0} />
+              <ResultField resultName="H2" value={resultN2} />
+              <ResultField resultName="H4" value={resultN4} />
+              <ResultField resultName="H16" value={resultN16} />
             </div>
 
             <div className={styles.resultBox}>
-              <ResultField resultName="A1" value={resultA1} normalValue={0} />
-              <ResultField resultName="A2" value={resultA2} normalValue={0} />
+              <ResultField resultName="A1" value={resultA1} />
+              <ResultField resultName="A2" value={resultA2} />
               <ResultField resultName="A4" value={resultA4} />
               <ResultField resultName="A16" value={resultA16} />
             </div>
