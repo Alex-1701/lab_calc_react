@@ -5,23 +5,31 @@
   align-items: center;
   height: 40px;
   background: #c2c2c2;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .icon {
   cursor: pointer;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
   -webkit-tap-highlight-color: transparent;
+  border-radius: 3px;
+  padding: 0;
+  background-color: transparent;
+  color: black;
 
-  border-radius: 5px;
-  padding: 7.5px;
+  svg {
+    width: 25px;
+    height: 25px;
+  }
 
   &:active {
     background-color: #a4a4a4;
-
-    path {
-      fill: #3f3434;
-    }
   }
 }
 
