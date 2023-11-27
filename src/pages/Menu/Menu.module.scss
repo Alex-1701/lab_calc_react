@@ -10,10 +10,17 @@
     border-radius: 7px;
     background-color: #f2f2f2;
     padding: 5px 35px;
+    -webkit-tap-highlight-color: transparent;
+    color: #252525;
 
     &:hover {
       cursor: pointer;
-      //border: 2px solid black;
+    }
+
+    &:active {
+      background-color: #dedede;
+      border-color: #363636;
+      color: #000000FF;
     }
   }
 }

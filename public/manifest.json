@@ -27,7 +27,7 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "https://lab-calc-react.web.app/menu",
+  "start_url": "/menu",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

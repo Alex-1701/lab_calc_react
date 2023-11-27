@@ -18,6 +18,10 @@
 
 .not-ok-result {
   border: 2px solid red;
+  background-color: #dcb6b6;
+  .result-name {
+    background-color: #dcb6b6;
+  }
 }
 
 .result-name {
@@ -28,19 +32,10 @@
   text-align: left;
   padding-left: 10px;
 }
-.warning-circle {
-  border-radius: 50%;
-  background-color: rgb(255, 0, 0);
-  width: 15px;
-  height: 15px;
-  margin-right: 15px;
-}
 
 .name-and-result-and-warning {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  //align-content: center;
   align-items: center;
-  //border: 1px dashed blue;
 }

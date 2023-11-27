@@ -9,7 +9,7 @@ export function GitHubLink() {
       target="_blank"
       rel="noreferrer"
     >
-      lab calc v3.0.0
+      lab calc v3.0.1
     </a>
   )
 }

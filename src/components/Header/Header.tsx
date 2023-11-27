@@ -20,14 +20,19 @@ export function Header({ onClear }: Props) {
 
   return (
     <header className={styles.pageHeader}>
-      <Menu
+      <button
+        type="button"
         className={styles.icon}
         onClick={() => navigate(pages.Menu.route)}
-      />
+      >
+        <Menu />
+      </button>
       <div className={styles.pageTitle}>
         {currentPage ? currentPage[1].name : ""}
       </div>
-      <Clear className={styles.icon} onClick={onClear} />
+      <button type="button" className={styles.icon} onClick={onClear}>
+        <Clear />
+      </button>
     </header>
   )
 }

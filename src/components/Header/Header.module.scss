@@ -4,15 +4,33 @@
   justify-content: space-between;
   align-items: center;
   height: 40px;
+  background: #c2c2c2;
   padding-left: 7px;
   padding-right: 7px;
-  background: #c2c2c2;
 }
 
 .icon {
   cursor: pointer;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 3px;
+  padding: 0;
+  background-color: transparent;
+  color: black;
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  &:active {
+    background-color: #a4a4a4;
+  }
 }
 
 .page-title {
