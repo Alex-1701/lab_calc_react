@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires, import/no-extraneous-dependencies */
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
@@ -57,6 +56,7 @@ module.exports = {
     alias: {
       "@components": path.resolve(__dirname, "../src/components"),
       "@images": path.resolve(__dirname, "../src/images"),
+      "@pages": path.resolve(__dirname, "../src/pages"),
     },
   },
   output: {
