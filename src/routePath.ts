@@ -1,27 +1,22 @@
-export interface Page {
-  route: string
-  name: string
-}
-
 export const pages = {
   Menu: {
-    route: "/menu",
-    name: "Lab Calc",
+    route: "/",
+    title: "Lab Calc",
   },
   Nechiporenko: {
     route: "/nechiporenko",
-    name: "Нечипоренко",
+    title: "Нечипоренко",
   },
   Fibrinogen: {
     route: "/fibrinogen",
-    name: "Фибриноген",
+    title: "Фибриноген",
   },
   LPNP: {
     route: "/lpnp",
-    name: "ЛПНП",
+    title: "ЛПНП",
   },
   SMG: {
     route: "/smg",
-    name: "КА",
+    title: "КА",
   },
 }

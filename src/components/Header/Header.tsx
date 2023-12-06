@@ -28,7 +28,7 @@ export function Header({ onClear }: Props) {
         <Menu />
       </button>
       <div className={styles.pageTitle}>
-        {currentPage ? currentPage[1].name : ""}
+        {currentPage ? currentPage[1].title : ""}
       </div>
       <button type="button" className={styles.icon} onClick={onClear}>
         <Clear />
