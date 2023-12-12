@@ -10,7 +10,7 @@ export function GitHubLink() {
       rel="noreferrer"
       tabIndex={-1}
     >
-      lab calc v3.0.3
+      lab calc v3.0.4
     </a>
   )
 }
