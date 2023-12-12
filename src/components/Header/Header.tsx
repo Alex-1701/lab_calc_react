@@ -21,6 +21,7 @@ export function Header({ onClear }: Props) {
   return (
     <header className={styles.pageHeader}>
       <button
+        aria-label="menu"
         type="button"
         className={styles.icon}
         onClick={() => navigate(pages.Menu.route)}
@@ -30,7 +31,12 @@ export function Header({ onClear }: Props) {
       <div className={styles.pageTitle}>
         {currentPage ? currentPage[1].title : ""}
       </div>
-      <button type="button" className={styles.icon} onClick={onClear}>
+      <button
+        aria-label="clear"
+        type="button"
+        className={styles.icon}
+        onClick={onClear}
+      >
         <Clear />
       </button>
     </header>
