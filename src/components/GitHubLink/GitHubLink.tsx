@@ -1,4 +1,5 @@
 import React from "react"
+
 import styles from "./GitHubLink.module.scss"
 
 export function GitHubLink() {
@@ -10,7 +11,7 @@ export function GitHubLink() {
       rel="noreferrer"
       tabIndex={-1}
     >
-      lab calc v3.0.4
+      lab calc v3.0.5
     </a>
   )
 }
