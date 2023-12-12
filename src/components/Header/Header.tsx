@@ -29,7 +29,7 @@ export function Header({ onClear }: Props) {
         <Menu />
       </button>
       <div className={styles.pageTitle}>
-        {currentPage ? currentPage[1].title : ""}
+        {currentPage ? currentPage[1].title : pages.Menu.title}
       </div>
       <button
         aria-label="clear"
